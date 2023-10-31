@@ -6,8 +6,8 @@
     // selecting data associated with this particular id
     $result = mysqli_query($dbc, "SELECT * FROM tblsubjects WHERE Subject_Id=$id");
     while($row = mysqli_fetch_array($result)) {
-        $code = $row['subject_code'];
-        $name = $row['subject_name'];
+        $code = $row['Subject_Code'];
+        $name = $row['Subject_Name'];
     }
 ?>
 
