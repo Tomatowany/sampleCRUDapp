@@ -4,7 +4,7 @@
     // getting id of the data from url
     $id = $_GET['id'];
     // selecting data associated with this particular id
-    $result = mysqli_query($dbc, "SELECT * FROM tblsubjects WHERE Subject_Id=$id");
+    $result = mysqli_query($dbc, "SELECT * FROM tblsubjects WHERE Subject_ID=$id");
     while($row = mysqli_fetch_array($result)) {
         $code = $row['Subject_Code'];
         $name = $row['Subject_Name'];
@@ -22,7 +22,7 @@
     <h1>Edit Subject</h1>
     <a href="../index.php">Home</a>
     <br/><br/>
-    <form action="../functions/edit.php" method="post" name="form1">
+    <form action="../functions/edit.php" method="POST" name="form1">
         <table border="0">
             <tr>
                 <td>Subject Code</td>
